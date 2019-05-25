@@ -61,7 +61,6 @@ module.exports = class MenuController {
     minutes = minutes < 10 ? '0'+minutes : minutes;
     var strTime = date + ' ' + hours + ':' + minutes + ' ' + ampm;
     console.log(strTime);
-    this.main();
   }
 
   exit(){
