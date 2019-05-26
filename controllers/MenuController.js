@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const ContactController = require("./ContactControllers")
 
 module.exports = class MenuController {
   constructor(){
@@ -14,7 +15,7 @@ module.exports = class MenuController {
         ]
       }
     ];
-    this.contacts = [];
+    this.nook = new ContactController();
   }
 
   main(){
