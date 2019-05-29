@@ -1,4 +1,3 @@
-const inquirer = require("inquirer");
 const Contact = require("../db/models").Contact;
 
 
@@ -24,7 +23,7 @@ module.exports = class ContactController {
       },
       {
         type: "input",
-        name: "email",
+        name: "name",
         message: "Contact's email -",
         validate(val){
           return val !== "";
@@ -34,6 +33,10 @@ module.exports = class ContactController {
   }
 
   addContact(name, phone, email){
-    return Contact.create({name, phone, email})
+    return Contact.create({name, phone, email});
+  }
+
+  getContacts(){
+    return Contact.findAll();
   }
 }
