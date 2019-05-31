@@ -23,7 +23,7 @@ module.exports = class ContactController {
       },
       {
         type: "input",
-        name: "name",
+        name: "email",
         message: "Contact's email -",
         validate(val){
           return val !== "";
